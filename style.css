@@ -28,7 +28,7 @@
 }
 
 .show-menu .hamburguer {
-    right: 18rem;
+    right: 16rem;
 }
 
 .line {
@@ -36,6 +36,49 @@
     height: 2px;
     background-color: rgb(221, 221, 221);
     box-shadow: 0.1rem 0.1rem 1px black;
+    transition: transform 0.5s;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(.3rem, .45rem);
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(.15rem, -.50rem);
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9d58ae;
+    color: white;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: .5rem solid #9d58ae;
+    border-top: .5rem solid transparent;
+    border-left: .5rem solid transparent;
+    border-bottom: .5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+    transition: 0.5s;
 }
 
 header {
@@ -166,7 +209,8 @@ header {
 }
 
 .menu-link:hover {
-    color: #773c86;
+    color: #9d58ae;
+    text-shadow: .2rem .2rem 3rem rgba(0, 0, 0, .4);
 }
 
 .social-media {
@@ -179,7 +223,7 @@ header {
 }
 
 .social-media i {
-    color: #773c86;
+    color: #9d58ae;
     height: 2.5rem;
     width: 2.5rem;
     font-size: 2rem;
