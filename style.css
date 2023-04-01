@@ -157,11 +157,12 @@ header {
     cursor: pointer;
     opacity: 0;
     animation: moveBanner 1s 0.9s forwards;
-
 }
 
 .banner button:hover {
-    color: rgb(255, 255, 255);
+    background: #652b73b7;
+    background: -webkit-linear-gradient(to bottom, #c6426eb6, #652b73a8);
+    background: linear-gradient(to left, #c6426eb0, #652b73a7);
 }
 
 @keyframes moveBanner {
